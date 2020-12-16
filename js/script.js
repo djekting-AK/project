@@ -245,42 +245,69 @@
 
 //////////////////////////////////////////////////////////////////
 
-const options = {
-  name: "test",
-  width: 1024,
-  height: 1024,
-  colors: {
-    border: "black",
-    bg: "red",
-  },
-  makeTest: function () {
-    console.log("Test");
-  },
-};
+// const options = {
+//   name: "test",
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: "black",
+//     bg: "red",
+//   },
+//   makeTest: function () {
+//     console.log("Test");
+//   },
+// };
 
-// console.log(options.name);
-// delete options.name;
-// console.log(options);
+// // console.log(options.name);
+// // delete options.name;
+// // console.log(options);
 
-for (let key in options) {
-  if (typeof options[key] === "object") {
-    for (const i in options[key]) {
-      console.log(`Свойство: ${i} имеет зеначение ${options[key][i]}`);
-    }
-  } else {
-    console.log(`Свойство: ${key} имеет зеначение ${options[key]}`);
-  }
-}
+// for (let key in options) {
+//   if (typeof options[key] === "object") {
+//     for (const i in options[key]) {
+//       console.log(`Свойство: ${i} имеет зеначение ${options[key][i]}`);
+//     }
+//   } else {
+//     console.log(`Свойство: ${key} имеет зеначение ${options[key]}`);
+//   }
+// }
 
-console.log(Object.keys(options));
+// console.log(Object.keys(options));
 
-options.makeTest();
+// options.makeTest();
 
-const { border, bg } = options.colors;
-console.log(border);
+// const { border, bg } = options.colors;
+// console.log(border);
 
 //////////////////////////////////////////////////////////////////
+const arr = [1, 2, 3, 40, 115, 18, 9];
+console.log(
+  arr.sort((a, b) => {
+    return a - b;
+  })
+);
+arr.pop();
+console.log(arr);
+arr.push(10);
+console.log(arr);
 
+arr.unshift(12);
+console.log(arr);
+arr[99] = 0;
+for (let value of arr) {
+  console.log(value);
+}
+
+console.log(arr);
+
+arr.forEach((element, i, arr) => {
+  console.log(`${i}: ${element} внутри массива ${arr}`);
+});
+
+const str = "aaaaaa,ssssssss,ffff,eee";
+const prod = str.split(",");
+console.log(prod);
+console.log(prod.join("; "));
 //////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////
