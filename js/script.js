@@ -280,36 +280,106 @@
 // console.log(border);
 
 //////////////////////////////////////////////////////////////////
-const arr = [1, 2, 3, 40, 115, 18, 9];
-console.log(
-  arr.sort((a, b) => {
-    return a - b;
-  })
-);
-arr.pop();
-console.log(arr);
-arr.push(10);
-console.log(arr);
 
-arr.unshift(12);
-console.log(arr);
-arr[99] = 0;
-for (let value of arr) {
-  console.log(value);
+// const arr = [1, 2, 3, 40, 115, 18, 9];
+// console.log(
+//   arr.sort((a, b) => {
+//     return a - b;
+//   })
+// );
+// arr.pop();
+// console.log(arr);
+// arr.push(10);
+// console.log(arr);
+
+// arr.unshift(12);
+// console.log(arr);
+// arr[99] = 0;
+// for (let value of arr) {
+//   console.log(value);
+// }
+
+// console.log(arr);
+
+// arr.forEach((element, i, arr) => {
+//   console.log(`${i}: ${element} внутри массива ${arr}`);
+// });
+
+// const str = "aaaaaa,ssssssss,ffff,eee";
+// const prod = str.split(",");
+// console.log(prod);
+// console.log(prod.join("; "));
+
+//////////////////////////////////////////////////////////////////
+
+const obj = {
+  a: 5,
+  b: 1,
+  c: {
+    x: 3,
+    y: 10,
+  },
+};
+
+const copy = obj; // по ссылке
+
+function copyObj(mainObj) {
+  let objCopy = {};
+
+  for (const key in mainObj) {
+    objCopy[key] = mainObj[key];
+  }
+
+  return objCopy;
 }
 
-console.log(arr);
+const newObj = copyObj(obj);
+console.log("newObj", newObj);
 
-arr.forEach((element, i, arr) => {
-  console.log(`${i}: ${element} внутри массива ${arr}`);
-});
+newObj.c.x = 100;
 
-const str = "aaaaaa,ssssssss,ffff,eee";
-const prod = str.split(",");
-console.log(prod);
-console.log(prod.join("; "));
+console.log("obj", obj);
+console.log("newObj", newObj);
+
+const add = {
+  d: 33,
+  e: 44,
+};
+
+console.log(Object.assign(obj, add));
+let clone = Object.assign({}, add);
+
+//////////////////////////////////////////////////////////////////
+const oldArr = ["a", "b", "c"];
+const newArr = oldArr.slice();
+newArr[1] = "sdfdghjhfdgsfda";
+console.log(oldArr);
+console.log(newArr);
 //////////////////////////////////////////////////////////////////
 
+const video = ["youtube", "vimeo", "rutube"],
+  blogs = ["wordpress", "livejournal", "blogger"],
+  internet = [...video, ...blogs, "vk", "facebook"];
+
+console.log(internet);
+
+function logg(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+
+logg(...video);
 //////////////////////////////////////////////////////////////////
+
+const array = ["a", "b"];
+const newArray = [...array];
+
+const q = {
+  one: 1,
+  two: 2,
+};
+const newQ = { ...q };
+console.log(newQ);
 
 //////////////////////////////////////////////////////////////////
