@@ -312,74 +312,76 @@
 
 //////////////////////////////////////////////////////////////////
 
-const obj = {
-  a: 5,
-  b: 1,
-  c: {
-    x: 3,
-    y: 10,
-  },
-};
+// const obj = {
+//   a: 5,
+//   b: 1,
+//   c: {
+//     x: 3,
+//     y: 10,
+//   },
+// };
 
-const copy = obj; // по ссылке
+// const copy = obj; // по ссылке
 
-function copyObj(mainObj) {
-  let objCopy = {};
+// function copyObj(mainObj) {
+//   let objCopy = {};
 
-  for (const key in mainObj) {
-    objCopy[key] = mainObj[key];
-  }
+//   for (const key in mainObj) {
+//     objCopy[key] = mainObj[key];
+//   }
 
-  return objCopy;
-}
+//   return objCopy;
+// }
 
-const newObj = copyObj(obj);
-console.log("newObj", newObj);
+// const newObj = copyObj(obj);
+// console.log("newObj", newObj);
 
-newObj.c.x = 100;
+// newObj.c.x = 100;
 
-console.log("obj", obj);
-console.log("newObj", newObj);
+// console.log("obj", obj);
+// console.log("newObj", newObj);
 
-const add = {
-  d: 33,
-  e: 44,
-};
+// const add = {
+//   d: 33,
+//   e: 44,
+// };
 
-console.log(Object.assign(obj, add));
-let clone = Object.assign({}, add);
+// console.log(Object.assign(obj, add));
+// let clone = Object.assign({}, add);
 
 //////////////////////////////////////////////////////////////////
-const oldArr = ["a", "b", "c"];
-const newArr = oldArr.slice();
-newArr[1] = "sdfdghjhfdgsfda";
-console.log(oldArr);
-console.log(newArr);
+
+// const oldArr = ["a", "b", "c"];
+// const newArr = oldArr.slice();
+// newArr[1] = "sdfdghjhfdgsfda";
+// console.log(oldArr);
+// console.log(newArr);
+
 //////////////////////////////////////////////////////////////////
 
-const video = ["youtube", "vimeo", "rutube"],
-  blogs = ["wordpress", "livejournal", "blogger"],
-  internet = [...video, ...blogs, "vk", "facebook"];
+// const video = ["youtube", "vimeo", "rutube"],
+//   blogs = ["wordpress", "livejournal", "blogger"],
+//   internet = [...video, ...blogs, "vk", "facebook"];
 
-console.log(internet);
+// console.log(internet);
 
-function logg(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
+// function logg(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
 
-logg(...video);
+// logg(...video);
 //////////////////////////////////////////////////////////////////
 
-const array = ["a", "b"];
-const newArray = [...array];
+// const array = ["a", "b"];
+// const newArray = [...array];
 
-const q = {
-  one: 1,
-  two: 2,
-};
-const newQ = { ...q };
-console.log(newQ);
+// const q = {
+//   one: 1,
+//   two: 2,
+// };
+// const newQ = { ...q };
+// console.log(newQ);
 
 //////////////////////////////////////////////////////////////////
